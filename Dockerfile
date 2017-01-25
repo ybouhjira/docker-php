@@ -7,3 +7,7 @@ RUN apt-get install php-amqplib -y && \
   php composer-setup.php && \
   php -r "unlink('composer-setup.php');" && \
   mv composer.phar /usr/bin/composer
+
+RUN docker-php-ext-install bcmath
+
+
